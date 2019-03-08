@@ -82,7 +82,7 @@ describe('Thermostat', function() {
 
   describe('Thermostat', function(){
     it('can tell low usage', function(){
-      thermo.decrease(3);
+       thermo._temp = 17;
       expect(thermo.usage()).toEqual('low usage');
     });
 
@@ -90,14 +90,14 @@ describe('Thermostat', function() {
 
   describe('Thermostat', function(){
     it('can tell medium usage', function(){
-      thermo.increase(5);
+       thermo._temp = 18;
       expect(thermo.usage()).toEqual('medium usage');
     });
   });
 
   describe('Thermostat', function(){
     it('can tell high usage', function(){
-      thermo.increase(6);
+       thermo._temp = 25;
       expect(thermo.usage()).toEqual('high usage');
     });
   });
